@@ -4,6 +4,26 @@ import java.util.Scanner;
 
 public class TechNumber {
 
+	//	A tech number is a number with an even number of digits that can be split into two equal halves, and the square of the sum of those halves is equal to the number itself. For example, 3025 is a tech number because (30 + 25)2 = (55)2 = 3025	
+
+//	eg1:
+//	2025 :
+//	20 +25 = 55
+//	55 x55 = 2025 or square of 55
+//  2025 equal to 2025
+//	hence tech number
+
+//	eg2:
+//	1312 :
+//	13 + 12 = 25
+//	25 x 25 = 625 or square of 25
+// 1312 not equal to 625
+//	hence not tech number
+
+	
+
+
+	
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);

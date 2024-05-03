@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Peterson_Number {
 
 // A number is said to be Peterson if the sum of factorials of each digit is equal to the sum of the number itself.	
+//145 = 1! + 4! + 5! = 1 + 24 + 120 = 145.
 	
 	public static void main(String[] args) {
 		

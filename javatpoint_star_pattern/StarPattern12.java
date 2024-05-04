@@ -31,3 +31,10 @@ public class StarPattern12 {
 	}
 	
 }
+
+
+
+     *
+    ***
+   *****
+  *******

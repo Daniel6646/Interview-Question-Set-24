@@ -22,3 +22,12 @@ public class StarPattern6 {
 		
 	}
 }
+
+
+
+
+
+//    *
+//   **
+//  ***
+// ****

@@ -1,8 +1,6 @@
 package javatpoint_StarPattern;
 
 public class StarPattern17 {
-
-
 	
 	public static void main(String args[]) {
 		
@@ -25,8 +23,12 @@ public class StarPattern17 {
 			}
 			System.out.println();
 		}
-	}
-
-
-	
+	}	
 }
+
+
+*****
+*   *
+*   *
+*   *
+*****

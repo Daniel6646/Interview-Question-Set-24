@@ -21,3 +21,9 @@ public class StarPattern5 {
 	}
 	
 }
+
+    *
+   *
+  *
+ *
+

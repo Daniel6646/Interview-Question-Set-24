@@ -97,7 +97,10 @@ public int findContentChildren2(int[] g, int[] s) {
         int cookieIndex = 0;
         while (cookieIndex < s.length && childIndex < g.length) {
 
-            if (g[childIndex] <= s[cookieIndex]) { childIndex++; }
+            if (g[childIndex] <= s[cookieIndex]) 
+	    { 
+		    childIndex++; 
+	    }
             cookieIndex++;
         }    
 

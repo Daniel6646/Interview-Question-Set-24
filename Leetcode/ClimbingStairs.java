@@ -30,6 +30,8 @@ public class ClimbingStairs {
 
 // 1 <= n <= 45
 
+
+// similar as Fibonacci series	
 	
 	public static void main(String[] args) {
 		

@@ -51,6 +51,8 @@ public class ClassesMoreThan5 {
 //	- Biology has 1 student, so we do not include it.
 //	- Computer has 1 student, so we do not include it.
 
+
+//	In SQL, the GROUP BY clause combines similar rows into a single result row for each group of rows that have the same values. It's one of the most frequently used SQL clauses and is often used with aggregations to show one value per grouped field or combination of fields
 	
 	
 	// SOLUTION***

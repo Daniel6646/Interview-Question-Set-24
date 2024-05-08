@@ -40,6 +40,8 @@ public class DuplicateEmail {
 //	| a@b.com |
 //	+---------+
 //	Explanation: a@b.com is repeated two times.
+
+//SOLUTION::
   
 //	select DISTINCT p1.email from Person p1,Person p2
 //	where p1.id <> p2.id AND p1.email = p2.email;

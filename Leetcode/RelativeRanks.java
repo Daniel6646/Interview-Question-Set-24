@@ -90,6 +90,50 @@ public class RelativeRanks {
 		return result;
     }
 	
+	public static String[] findRelativeRanks2(int[] score) {
+
+		String res[] = new String[score.length];
+		HashMap<Integer, Integer> m = new HashMap<>();
+	
+		for (int i = 0; i < score.length; i++) {
+			m.put(score[i], i);
+		
+		}
+		Arrays.sort(score);
+
+		int rank = 1;
+		
+		for (int i = score.length - 1; i >= 0; i--) {
+		
+			//orignal array [10,3,8,9,4]
+			//sorted array 3,4,8,9,10
+			//values in map on debug 3=1,4=4,8=2,9=3,10=0
+			if (rank == 1) {
+				res[m.get(score[i])] = "Gold Medal"; //add in res array, m map contains index of score array there we add gold,silver,bronze or numbers.
+			} //res[m.get[10]] res[0] as per og array 
+			
+			
+			else if (rank == 2) {
+				res[m.get(score[i])] = "Silver Medal";
+			}//res[m.get[9]] res[3] as per og array  
+
+			else if (rank == 3) {
+				res[m.get(score[i])] = "Bronze Medal";
+			}//res[m.get[8]] res[0] as per og array 
+			
+			else {
+				res[m.get(score[i])] = String.valueOf(rank);
+				//res[m.get(score[i])]=String.valueOf(score.length-i);
+				//m.get(score[i] ) to get orignal index and add that value there
+			}
+			
+			rank++;
+		}
+		return res;
+	}
+	
+
+
 	
 	
 	//

@@ -26,7 +26,7 @@ public class ReverseString2 {
 	        int n = str.length;
 	        for(int i = 0 ; i <= n-1; i += 2*k){
 	            if(i+k-1 <= n-1){
-	                reverseK(i,i+k-1,str);
+	                reverseK(i,i+k-1,str);// acc to i=0 and its next element is less than lenght to reverse, then i=4 and i+k-1 4+2-1 = 5 less than length then ii and i+k-1 reverse it
 	            }else{
 					//for fewer than k characters left (edge case)
 	                reverseK(i,n-1,str);

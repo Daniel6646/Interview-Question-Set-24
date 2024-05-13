@@ -84,7 +84,7 @@ public class SetMismatch {
 			 for(int j=0;j<nums.length;j++) {
 				 
 				 
-				 if(nums[j] == i) {
+				 if(i == nums[j] ) {
 					 
 					 count++;
 					 

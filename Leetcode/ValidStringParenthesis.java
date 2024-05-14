@@ -32,7 +32,11 @@ import java.util.Stack;
 public class ValidStringParenthesis {	
 	
 	public boolean isValid(String s) {
-	
+
+	//Push: Adds an element to the top of the stack.
+	//Pop: Removes and returns the element at the top of the stack.
+	//Peek: Returns the element at the top of the stack without removing it
+		
 	Stack<Character> st = new Stack<Character>();
 	
 	for (int i = 0; i < s.length(); i++) {

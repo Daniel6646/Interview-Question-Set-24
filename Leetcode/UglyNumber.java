@@ -42,21 +42,19 @@ public class UglyNumber {
 	
     }
 
-
-	public boolean isUgly2(int n) { 
+public boolean isUgly2(int n) { 
 	
-		for (int i=2; i<6 && n>0; i++)
-		    while (n % i == 0)
-		        n /= i;
-		return n == 1;
 		
 		
-	}
-	public boolean isUgly2(int n) { 
-	
-		for (int i=2; i<6 && n>0; i++)
-		    while (n % i == 0)
+		for (int i=2; i<6 && n>0; i++) {
+		  
+			while (n % i == 0) {
 		        n /= i;
+		//n = n / i;
+			}
+		}
+		
+		
 		return n == 1;
 		
 		

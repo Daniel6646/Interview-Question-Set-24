@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class MysteryNumber {
 
-	
+//A mystery number is a number that can be expressed as the sum of two numbers and those two numbers should be the reverse of each other. Examples: Input : n = 121. Output : 29 92
+
 		// driver code
 		public static void main(String args[]) {
 			

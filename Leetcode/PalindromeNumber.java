@@ -2,6 +2,11 @@ package LeetCode;
 
 public class PalindromeNumber {
 
+// Given an integer x, return true if x is a 
+// palindrome, and false otherwise.
+
+ 
+	
 	public boolean isPalindrome(int x) {
 		int temp = x;
 		int reverse = 0;

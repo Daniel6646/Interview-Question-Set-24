@@ -39,7 +39,7 @@ public class BestTimeToBuyAndSell {
 			 
 			 for(int j=i+1; j<prices.length;j++) {
 				 
-				 currentPrice = j-i;
+				 currentPrice = prices[j]-prices[i];
 				 
 				 if (currentPrice > 0 ) {
 					 

@@ -44,7 +44,7 @@ public class MaxConsecutiveOnes {
 				
 			}
 		}
-		return count;
+		return maximum;
 	
     }
 	

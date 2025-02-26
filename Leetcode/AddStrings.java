@@ -52,5 +52,13 @@ public class AddStrings {
 		  
 		  return result;
 	    }
-	  
+ public String addStrings3(String num1, String num2) {
+	     
+	  BigInteger bg1 = new BigInteger(num1);
+	  BigInteger bg2 = new BigInteger(num2);
+			  
+	 return bg1.add(bg2).toString();
+
+	   }
+	
 }

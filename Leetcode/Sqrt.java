@@ -61,4 +61,10 @@ Constraints:
 			  return sqrt;
 
 	    }
+
+	    public int mySqrt2(int x) {
+	      
+	    	return (int) Math.sqrt(x);
+	    }
 }
+

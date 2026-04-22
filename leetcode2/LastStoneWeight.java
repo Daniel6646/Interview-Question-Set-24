@@ -2,6 +2,7 @@ package LeetCode2;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class LastStoneWeight {
 
@@ -26,6 +27,7 @@ public class LastStoneWeight {
 //	we combine 2 and 4 to get 2 so the array converts to [2,1,1,1] then,
 //	we combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
 //	we combine 1 and 1 to get 0 so the array converts to [1] then that's the value of the last stone.
+
 //	Example 2:
 //
 //	Input: stones = [1]
@@ -42,43 +44,75 @@ public class LastStoneWeight {
 	public int lastStoneWeight(int[] stones)
 	{
 			ArrayList<Integer> listStones = new ArrayList<>();
-			for (int a : stones)
+			for (int a : stones) {
+				
 				listStones.add(a);
+			}
+				
 
-			while (true)
+			while (listStones.size() > 1)
 			{
-				int min = Integer.MAX_VALUE;
-				int max = Integer.MIN_VALUE;
+				int secondLast = Integer.MAX_VALUE;
+				int last = Integer.MIN_VALUE;
 				int len = listStones.size();
 
-				if (len == 1 || len == 0)
-				{
-					break;
-				}
+//				if (len == 1 || len == 0)
+//				{
+//					break;
+//				}
 
 				Collections.sort(listStones);
-				min = listStones.get(len - 2);
-				max = listStones.get(len - 1);
+				secondLast = listStones.get(len - 2);
+			last = listStones.get(len - 1);
 
-				if (min < max)
+				if (secondLast < last)
 				{
-					max = max - min;
+					last = last - secondLast;
 					listStones.remove(listStones.size()-1);
 					listStones.remove(listStones.size()-1);
-					listStones.add(max);
+					listStones.add(last);
 
 				}
-				else if (min == max)
+				else if (secondLast == last)
 				{
 					listStones.remove(listStones.size()-1);
 					listStones.remove(listStones.size()-1);
 				}
 			}
 			
-	        if(listStones.size()==1)
-	            return listStones.get(0);
+	        if(listStones.size()==1) {
+	         
+	        	return listStones.get(0);
+	        }
+	        
 	        return 0;
 		}
 
+	
+	
+	public int lastStoneWeight2(int[] stones) {
+
+	    List<Integer> list = new ArrayList<>();
+	    for (int s : stones) list.add(s);
+
+	    while (list.size() > 1) {
+
+	        Collections.sort(list); // sort ascending
+
+	        int last = list.remove(list.size() - 1);     // biggest
+	        int secondLast = list.remove(list.size() - 1); // second biggest
+	        // gets last and second last elements, and stores it in variable
+	        //if diff below we minus ad add it in list
+	        
+	        //if same no will be elimnated and iteration moves onto next numbers and those nos will be saved in above variables
+	        
+	        
+	        if (last != secondLast) {
+	            list.add(last - secondLast);
+	        }
+	    }
+
+	    return list.isEmpty() ? 0 : list.get(0);
+	}
 	
 }

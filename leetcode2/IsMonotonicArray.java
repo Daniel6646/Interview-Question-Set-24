@@ -65,6 +65,50 @@ public class IsMonotonicArray {
 		return increasing || decreasing;
 		
     }
+
+
+
+
+	public boolean isMonotonic2(int[] nums) { 
+		
+		
+		if(isDecreasing(nums) == false && isIncreasing(nums) == false ) {
+			
+			return false;
+		}
+		return true;
+	}
+
+	
+	public boolean isIncreasing(int nums []) {
+		
+		for(int i=0; i <nums.length-1; i++) {
+			
+			if(nums[i] > nums[i+1]) {
+				
+				return false;
+			}
+		}
+		
+		return true;
+		
+	}
+
+	
+	public boolean isDecreasing(int nums []) {
+		
+		for(int i=0; i <nums.length-1; i++) {
+			
+			if(nums[i] < nums[i+1]) {
+				
+				return false;
+			}
+		}
+		
+		return true;
+	
+}
+
 	
 	
 }

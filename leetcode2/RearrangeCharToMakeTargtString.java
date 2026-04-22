@@ -62,5 +62,38 @@ Note: This question is the same as 1189: Maximum Number of Balloons.
         
         return min;
     }
+
+
+
+	public int rearrangeCharacters22(String s, String target) {
+
+	    int[] freq = new int[26];
+
+	    // Count characters in s
+	    for (char c : s.toCharArray()) {
+	        freq[c - 'a']++;
+	    }
+
+	    int count = 0;
+
+	    // Try to build target again and again
+	    while (true) {
+
+	        for (char c : target.toCharArray()) {
+
+	            // If character not available → stop
+	            if (freq[c - 'a'] == 0) {
+	                return count;
+	            }
+
+	            // Use that character
+	            freq[c - 'a']--;
+	        }
+
+	        // Successfully built one target
+	        count++;
+	    }
+	}
+
 	
 }

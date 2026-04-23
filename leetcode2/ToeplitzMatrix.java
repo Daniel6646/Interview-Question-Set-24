@@ -20,7 +20,7 @@ public class ToeplitzMatrix {
 	
 //		    1 2 3 4
 //		    5 1 2 3		
-//	   		9 5 1 2
+//			9 5 1 2
 		   
 		   
 //			Example 2:
@@ -52,14 +52,34 @@ public class ToeplitzMatrix {
         // 4     03
         // 5     10  21
         // 9     20  
-        
-        for(int i=0 ;i<matrix.length-1;i++){
+		
+//		👉 Rows
+//		Go left → right
+//		Think: horizontal
+//		1 2 3 4   ← Row 0
+//		5 6 7 8   ← Row 1
+
+//		👉 Columns
+//		Go top ↓ down
+//		Think: vertical
+//		1 2 3
+//		↓ ↓ ↓
+//		4 5 6
+//		↓ ↓ ↓
+//		7 8 9
+		
+		int row = matrix.length-1;
+		int column = matrix[0].length-1;
+//	    1 2 3 4
+//	    5 1 2 3		
+//		9 5 1 2
+        for(int i=0 ;i<row;i++){
          
-        	for(int j=0 ;j<matrix[0].length-1;j++){
+        	for(int j=0 ;j<column;j++){
            
             	//int ele=matrix[i][j];
                 
-            	if(i<matrix.length-1 && j<matrix[0].length-1)
+            //	if(i<matrix.length-1 && j<matrix[0].length-1)
                 
             		if(matrix[i][j] != matrix[i+1][j+1]) {
                     

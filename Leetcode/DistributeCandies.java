@@ -56,5 +56,5 @@ public class DistributeCandies {
 	    }
 	  
 	  //one line code to get min value between these two instead of if else
-	  //return Math.min(hashSet.size(), candyType.length / 2);
+	  //return Math.min(candyLenght, noOfCandies);
 }

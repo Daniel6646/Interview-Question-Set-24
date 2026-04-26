@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class MissingNumber {
 
+//	Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.		 
+	
 //	Example 1:
 //
 //		Input: nums = [3,0,1]
@@ -43,6 +45,12 @@ public class MissingNumber {
     		}
     		
     	}
+    	//Arrays.sort(nums);
+    	//int maxNumber = nums.length-1;
+    	//for(int i=0;i<=maxNumber;i++) { }
+
+    	
+    	
     	System.out.println("max:"+max);
     	for(int i=0;i<=max;i++) {
     		
@@ -58,9 +66,7 @@ public class MissingNumber {
     }
     
     public static int  missingNumber2(int[] nums) {
-        
-         
-    	
+            	
     	int missingNumber = 0;
     	Arrays.sort(nums);
 

@@ -92,6 +92,39 @@ public class MinimumIndexOf2Lists {
        return arrayList.toArray(new String[0]);
 
 	}
+
+
+
+
+   public String[] findRestaurant2(String[] list1, String[] list2) {
+
+	    List<String> result = new ArrayList<>();
+	    int min = Integer.MAX_VALUE;
+
+	    for (int i = 0; i < list1.length; i++) {
+
+	        for (int j = 0; j < list2.length; j++) {
+
+	            if (list1[i].equals(list2[j])) {
+
+	                int sum = i + j;
+
+	                if (sum < min) {
+	                    min = sum;
+	                    result.clear();
+	                    result.add(list1[i]);
+	                } 
+	                else if (sum == min) {
+	                    result.add(list1[i]);
+	                }
+	            }
+	        }
+	    }
+
+	    return result.toArray(new String[0]);
+	}
+
+
 	
 	
 }

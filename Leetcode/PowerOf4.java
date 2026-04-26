@@ -67,5 +67,24 @@ public class PowerOf4 {
 		
 		return n ==1;
 	}
+
+
+
+
+//common solution for prmbl power of 2, power of 3 and power of 4, can be used as a common solution for all of these 3 problems
+	  
+	  public boolean isPower(int n, int base) {
+
+		    if (n <= 0) return false;
+
+		    while (n % base == 0) {
+		        n = n / base;
+		    }
+
+		    return n == 1;
+		}
+
+	
+
 	
 }

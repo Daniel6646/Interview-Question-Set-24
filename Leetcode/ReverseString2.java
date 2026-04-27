@@ -51,14 +51,14 @@ public class ReverseString2 {
 	    public String reverseStr2(String s, int k) {
 
 	        char[] arr = s.toCharArray();
-	        int n = arr.length;
+	        //int n = arr.length;
 
-	        for (int i = 0; i < n; i += 2 * k) {
+	        for (int i = 0; i < arr.length; i += 2 * k) {
 
 	            int left = i;
 
 	            // take min to avoid going out of bounds
-	            int right = Math.min(i + k - 1, n - 1);
+	            int right = Math.min(i + k - 1, arr.length - 1);
 
 	            // reverse from left to right
 	            while (left < right) {
@@ -72,9 +72,5 @@ public class ReverseString2 {
 
 	        return new String(arr);
 	    } 
-	    
-	    
 
-
-	
 }

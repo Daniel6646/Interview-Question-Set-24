@@ -24,10 +24,13 @@ public class ReverseString2 {
 	 public String reverseStr(String s, int k) {
 	        char[] str = s.toCharArray();
 	        int n = str.length;
+	        
 	        for(int i = 0 ; i <= n-1; i += 2*k){
-	            if(i+k-1 <= n-1){
+	            
+	        	if(i+k-1 <= n-1){
 	                reverseK(i,i+k-1,str);// acc to i=0 and its next element is less than lenght to reverse, then i=4 and i+k-1 4+2-1 = 5 less than length then ii and i+k-1 reverse it
-	            }else{
+	            }
+	            else{
 					//for fewer than k characters left (edge case)
 	                reverseK(i,n-1,str);
 	            }
@@ -46,10 +49,18 @@ public class ReverseString2 {
 	
 	    	}
 
-
-	
+	    
+	    
+	    
 	    public String reverseStr2(String s, int k) {
 
+//	    	    Example 1:
+//	    		Input: s = "abcdefg", k = 2
+//	    		Output: "bacdfeg"
+//	    		Example 2:
+//	    		Input: s = "abcd", k = 2
+//	    		Output: "bacd"
+	    	
 	        char[] arr = s.toCharArray();
 	        //int n = arr.length;
 
@@ -60,6 +71,27 @@ public class ReverseString2 {
 	            // take min to avoid going out of bounds
 	            int right = Math.min(i + k - 1, arr.length - 1);
 
+	           // Iteration 1
+//	            i = 0
+//	            Calculate:
+//	            i + k - 1 = 0 + 2 - 1 = 1
+//	            n - 1 = 6
+//	            👉 right = min(1, 6) = 1
+//	            ✔ Reverse from index 0 to 1
+//	            → "ab" → "ba"
+//
+//	            🟢 Iteration 2
+//	            i = 4
+//	            Calculate:
+//	            i + k - 1 = 4 + 2 - 1 = 5
+//	            n - 1 = 6
+//	            👉 right = min(5, 6) = 5
+//	            ✔ Reverse from index 4 to 5
+//	            → "ef" → "fe"
+
+	            // 🟢 Iteration 3
+//	            i = 8 → loop stops
+	            
 	            // reverse from left to right
 	            while (left < right) {
 	                char temp = arr[left];
@@ -72,5 +104,5 @@ public class ReverseString2 {
 
 	        return new String(arr);
 	    } 
-
+	    	    
 }

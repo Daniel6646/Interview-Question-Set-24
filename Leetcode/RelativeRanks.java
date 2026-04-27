@@ -1,5 +1,6 @@
 package LeetCode;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -40,6 +41,19 @@ public class RelativeRanks {
 	
 	
 	
+	public static void main(String[] args) {
+		
+		int array1[] = new int[] {5,4,3,2,1};
+		int array2[] = new int[] {10,3,8,9,4};
+		String result[] =  findRelativeRanks2(array2);
+		
+		System.out.println("Final result");
+		for(int i=0;i<result.length;i++) {
+			
+			System.out.print(result[i] + " ");
+		}
+		
+	}
 	
 	public String[] findRelativeRanks(int[] score) {
     
@@ -90,13 +104,25 @@ public class RelativeRanks {
 		return result;
     }
 	
+//	Example 1:
+//
+//	Input: score = [5,4,3,2,1]
+//	Output: ["Gold Medal","Silver Medal","Bronze Medal","4","5"]
+//	Explanation: The placements are [1st, 2nd, 3rd, 4th, 5th].
+//	Example 2:
+//
+//	Input: score = [10,3,8,9,4]
+//	Output: ["Gold Medal","5","Bronze Medal","Silver Medal","4"]
+//	Explanation: The placements are [1st, 5th, 3rd, 2nd, 4th].
+
+	
 	public static String[] findRelativeRanks2(int[] score) {
 
 		String res[] = new String[score.length];
-		HashMap<Integer, Integer> m = new HashMap<>();
+		HashMap<Integer, Integer> map = new HashMap<>();
 	
 		for (int i = 0; i < score.length; i++) {
-			m.put(score[i], i);
+			map.put(score[i], i);
 		
 		}
 		Arrays.sort(score);
@@ -109,20 +135,20 @@ public class RelativeRanks {
 			//sorted array 3,4,8,9,10
 			//values in map on debug 3=1,4=4,8=2,9=3,10=0
 			if (rank == 1) {
-				res[m.get(score[i])] = "Gold Medal"; //add in res array, m map contains index of score array there we add gold,silver,bronze or numbers.
+				res[map.get(score[i])] = "Gold Medal"; //add in res array, m map contains index of score array there we add gold,silver,bronze or numbers.
 			} //res[m.get[10]] res[0] as per og array 
 			
 			
 			else if (rank == 2) {
-				res[m.get(score[i])] = "Silver Medal";
+				res[map.get(score[i])] = "Silver Medal";
 			}//res[m.get[9]] res[3] as per og array  
 
 			else if (rank == 3) {
-				res[m.get(score[i])] = "Bronze Medal";
+				res[map.get(score[i])] = "Bronze Medal";
 			}//res[m.get[8]] res[0] as per og array 
 			
 			else {
-				res[m.get(score[i])] = String.valueOf(rank);
+				res[map.get(score[i])] = String.valueOf(rank);
 				//res[m.get(score[i])]=String.valueOf(score.length-i);
 				//m.get(score[i] ) to get orignal index and add that value there
 			}
@@ -132,13 +158,9 @@ public class RelativeRanks {
 		return res;
 	}
 	
-
-
 	
 	
-	//
-//	
-//	public String[] findRelativeRanks(int[] score) {
+//	public static String[] findRelativeRanks2(int[] score) {
 //    
 //		int sortedArray[] = arrayInDescending(score);
 //		
@@ -179,7 +201,7 @@ public class RelativeRanks {
 //	
 //	
 //	
-//	public int[] arrayInDescending(int array[]) {
+//	public static int[] arrayInDescending(int array[]) {
 //		
 //		
 //		int temp = 0;
@@ -199,7 +221,7 @@ public class RelativeRanks {
 //		}
 //		return array;
 //	}
-//
+
 
 
 

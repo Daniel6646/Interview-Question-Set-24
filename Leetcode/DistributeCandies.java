@@ -42,17 +42,33 @@ public class DistributeCandies {
 			  hashSet.add(value);
 		  }
 		  
-		  int candyLenght = candyType.length/2;
-		  int noOfCandies = hashSet.size();
+		  int candyLenghtBy2 = candyType.length/2;
+		  int uniqueCandiesSize = hashSet.size();
 		  
-		  if(candyLenght >= noOfCandies ) {
+//		  if(candyLenghtBy2 >= uniqueCandiesSize ) {
+//			  
+//			  return uniqueCandiesSize;
+//		  }
+//		  
+//		  else {
+//			  return candyLenghtBy2;
+//		  }
+//			Input: candyType = [1,1,2,3]
+//			Output: 2
+// 		    4/2 = 2 i.e half size of candies and unqiue candies is 3
+//			so if 2 < 3 then return var which has 2 or else var which has 3		  
+		  if(candyLenghtBy2 <= uniqueCandiesSize) {
 			  
-			  return noOfCandies;
+			  return candyLenghtBy2;
+
 		  }
 		  
 		  else {
-			  return candyLenght;
+			   
+			  return uniqueCandiesSize;
+			  
 		  }
+		  
 	    }
 	  
 	  //one line code to get min value between these two instead of if else

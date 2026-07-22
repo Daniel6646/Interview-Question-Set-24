@@ -2,11 +2,12 @@ package LeetCode;
 
 public class UglyNumber {
 
-// 	An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.
-
-// Given an integer n, return true if n is an ugly number.
-
- 
+//	An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.
+//
+//	Given an integer n, return true if n is an ugly number.
+//
+//	 
+	
 	
 //	Example 1:
 //
@@ -28,39 +29,46 @@ public class UglyNumber {
 	public boolean isUgly(int n) {
         
 	if(n <=0) {
+	
 		return false;
 	}
 	
 	// % is modulus operator after division it carries value of remainder
 	// / is division operator it performs division operator
 	
-	while(n % 2 ==0) { n = n /2 ; }
-	while(n % 3 ==0) { n = n /3 ; }
-	while(n % 5 ==0) { n = n /5 ; }
+	while(n % 2 == 0)
+	{
+		n = n /2 ; 
+		
+	}
 	
-	return n ==1;
+	while(n % 3 == 0) {
+		n = n /3 ; 
+		
+	}
+	
+	while(n % 5 ==0) {
+		n = n /5 ; 
+		
+	}
+	
+	return n == 1;
 	
     }
-
-public boolean isUgly2(int n) { 
+	
+	public boolean isUgly2(int n) { 
 	
 		
 		
-		for (int i=2; i<6 && n>0; i++) {
+		for (int i=2; i<6 && n>0; i++)
 		  
-			while (n % i == 0) {
+			while (n % i == 0)
 		        n /= i;
-		//n = n / i;
-			}
-		}
-		
 		
 		return n == 1;
 		
 		
 	}
-
-
 
 	
 	public boolean isUgly3(int n) {
@@ -70,6 +78,17 @@ public boolean isUgly2(int n) {
 	    int[] factors = {2, 3, 5};
 
 	    for (int f : factors) {
+//for eg 30
+//
+//30 %2 == 0 not
+//30 / 2 = 15
+//
+//then again 15 % 3 = 0
+//15 / 3 = 5 
+//
+//next 5 % 5 = 0
+//5 / 5 = 1 
+//so true
 	        while (n % f == 0) {
 	            n = n / f;  
 	        }
@@ -77,8 +96,5 @@ public boolean isUgly2(int n) {
 
 	    return n == 1;
 	}
-
-
 	
 }
-

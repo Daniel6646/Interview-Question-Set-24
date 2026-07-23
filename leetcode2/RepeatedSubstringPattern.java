@@ -71,7 +71,18 @@ public class RepeatedSubstringPattern {
 
 
     public boolean repeatedSubstringPattern2(String s) {
-        return (s + s).substring(1, (s + s).length() - 1).contains(s);
+    	
+    String dblStr =	s + s;
+    int dblStrLen = dblStr.length();	
+    
+    if(dblStr.substring(1, dblStrLen-1).contains(s)) {
+    	
+    	return true;
+    }	
+    return false;
+    
+   // one line
+   //return (s + s).substring(1, (s + s).length() - 1).contains(s);
     }
     
 //    	s = abab
@@ -83,4 +94,8 @@ public class RepeatedSubstringPattern {
 //    		Yes
 //    		Return true
 //	
+
+
+
+
 }

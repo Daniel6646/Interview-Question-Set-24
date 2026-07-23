@@ -62,12 +62,25 @@ public class RepeatedSubstringPattern {
                 for (int j = 0; j < n / i; j++) {
                     repeated.append(substring);
                 }
-                if (repeated.toString().equals(s)) return true;
+                if (repeated.toString().equals(s)) 
+                	return true;
             }
         }
         return false;
     }
 
-	
-	
+
+    public boolean repeatedSubstringPattern2(String s) {
+        return (s + s).substring(1, (s + s).length() - 1).contains(s);
+    }
+    
+//    	s = abab
+//    		s + s
+//    		abababab
+//    		Remove first and last character
+//    		bababa
+//    		Contains "abab" ?
+//    		Yes
+//    		Return true
+//	
 }

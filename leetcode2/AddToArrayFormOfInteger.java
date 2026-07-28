@@ -1,5 +1,6 @@
 package LeetCode2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AddToArrayFormOfInteger {
@@ -61,25 +62,111 @@ public class AddToArrayFormOfInteger {
 //	`num` = [1, 0, 2, 1]
 	
 	
-	 public List<Integer> addToArrayForm(int[] num, int k) {
-		    
-		    List<Integer> res = new LinkedList<>();
-		    
-		    for (int i = num.length - 1; i >= 0; --i) {
-		    
-		        res.add(0, (num[i] + k) % 10);
-		        k = (num[i] + k) / 10;
-		    
-		    }
-		    
-		    while (k > 0) {
-		        res.add(0, k % 10);
-		        k /= 10;
-		    
-		    }
-		    return res;
-		  
-	 }
+//	 public List<Integer> addToArrayForm(int[] num, int k) {
+//		    
+//		    List<Integer> res = new LinkedList<>();
+//		    
+//		    for (int i = num.length - 1; i >= 0; --i) {
+//		    
+//		        res.add(0, (num[i] + k) % 10);
+//		        k = (num[i] + k) / 10;
+//		    
+//		    }
+//		    
+//		    while (k > 0) {
+//		        res.add(0, k % 10);
+//		        k /= 10;
+//		    
+//		    }
+//		    return res;
+//		  
+//	 }
 
-	
+	public static void main(String[] args) {
+		
+		int arr1[]= new int [] {1,2,0,0};
+		int k = 34;
+		int resultArray[]= addArrayIntoNum(arr1, k);
+
+		for(int i=0; i< resultArray.length;i++) {
+			
+			System.out.print(resultArray[i]+" ");
+		}
+		
+	}
+	 
+	 
+	 public static int[] addArrayIntoNum(int arr[], int numToAdd) {
+		 
+		int result[] = new int [arr.length]; 
+		//List<Integer> finalString = new ArrayList<>();
+		String no ="";
+		int index = arr.length-1;
+
+		
+		for(int i=0;i<arr.length;i++) {
+			
+			no += arr[i] + "";
+		}
+		 
+		int number = Integer.parseInt(no);
+		int total = number + numToAdd;
+		System.out.println("total final:: "+total);
+
+ //convert no into int array
+		int end = arr.length-1;
+		while(total != 0) {
+			
+			arr[end] = total % 10;
+			end--;
+			total = total / 10;
+			
+		}
+		return arr;
+	 }
+	 
+	 
 }
+		// convert no into int array
+//		String strValue = String.valueOf(total);
+//		String strArray[] = convertStrIntoStringArray(strValue);
+//
+//		System.out.println("strValue: "+strValue);
+//		
+//		int resultArray[] = new int [strValue.length()];
+//
+//		
+//		
+//		for(int i=0; i< strArray.length; i++) {
+//			
+//			resultArray[i] = Integer.parseInt(strArray[i]) ;
+////			System.out.println("char c:: "+c);
+////			 =(int) c;
+//		}
+//		
+//		
+////		while (total != 0){
+////			
+////			result[index] = total % 10;
+////			index--;
+////			total = total /10;
+////		}
+//		
+//		
+//		return resultArray;
+//	 }
+//
+//
+//	private static String[] convertStrIntoStringArray(String strValue) {
+//		// TODO Auto-generated method stub
+//		String strResult[] = new String[strValue.length()];
+//		
+//		for(int i=0; i<strValue.length(); i++) {
+//			
+//			strResult[i] =String.valueOf(strValue.charAt(i)) ;
+//		}
+//		
+//		return strResult;
+//	}
+	 
+

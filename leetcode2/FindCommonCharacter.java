@@ -84,9 +84,9 @@ public class FindCommonCharacter {
 		List<String> result = new ArrayList<>();
 	
 		for(Character key: firstMap.keySet()) {
-			
-		  if(firstMap.get(key) > 0 ) {
-			
+
+			if(firstMap.get(key) > 0 ) {
+			//below line because geKey will get e once l-2 so to pick each charactr
 			  for(int i=0; i<firstMap.get(key);i++) {
 				  
 				  result.add(key+"");

@@ -1,8 +1,6 @@
 package LeetCode;
 
 public class NextGreaterElement {
-
-	
 	
 	
 //	The next greater element of some element x in an array is the first greater element that is to the right of x in the same array.
@@ -23,6 +21,7 @@ public class NextGreaterElement {
 //	- 4 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
 //	- 1 is underlined in nums2 = [1,3,4,2]. The next greater element is 3.
 //	- 2 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
+
 //	Example 2:
 //
 //	Input: nums1 = [2,4], nums2 = [1,2,3,4]
@@ -39,17 +38,12 @@ public class NextGreaterElement {
 //	All integers in nums1 and nums2 are unique.
 //	All the integers of nums1 also appear in nums2.
 //	 
-	
-	
-	
-	
+
 	
 	public int[] nextGreaterElement(int[] nums1, int[] nums2) {
-    
-		
+    		
 		int answer[] = new int[nums1.length];
-		
-		
+				
 		for(int i=0;i<nums1.length;i++) {
 			int max = -1;
 			
@@ -65,18 +59,48 @@ public class NextGreaterElement {
 						
 						max = nums2[index];
 						break;
-					}
+					} // else { max = -1; }
 					index++;
 				}	
 					
-				}
 			}
+		}
 			answer[i] = max ;
-			
 		}
 		
 		return answer;
     }
 
 
+	public int[] nextGreaterElement2(int[] nums1, int[] nums2) {
+
+	    int[] ans = new int[nums1.length];
+
+	    for (int i = 0; i < nums1.length; i++) {
+
+	        int index = -1;
+
+	        // Find nums1[i] in nums2
+	        for (int j = 0; j < nums2.length; j++) {
+	            if (nums2[j] == nums1[i]) {
+	                index = j;
+	                break;
+	            }
+	        }
+
+	        ans[i] = -1;
+
+	        // Find next greater element
+	        for (int j = index + 1; j < nums2.length; j++) {
+	            if (nums2[j] > nums1[i]) {
+	                ans[i] = nums2[j];
+	                break;
+	            }
+	        }
+	    }
+
+	    return ans;
+	}
+	
+	
 }

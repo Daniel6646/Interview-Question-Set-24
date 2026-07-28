@@ -86,16 +86,12 @@ public class MinimumIndexOf2Lists {
 		   }
 		   
 	   }
-	   
-	   
-	   
        return arrayList.toArray(new String[0]);
 
 	}
-
-
-
-
+	
+	
+   
    public String[] findRestaurant2(String[] list1, String[] list2) {
 
 	    List<String> result = new ArrayList<>();
@@ -121,10 +117,14 @@ public class MinimumIndexOf2Lists {
 	        }
 	    }
 
-	    return result.toArray(new String[0]);
+	    return result.toArray(new String[0]); 
+// abv line simplified	    
+//	    String[] arr = new String[result.size()];
+//
+//	    for (int i = 0; i < result.size(); i++) {
+//	        arr[i] = result.get(i);
+//	    }
+//
+//	    return arr;
 	}
-
-
-	
-	
 }

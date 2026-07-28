@@ -8,8 +8,7 @@ public class Strontio_Number {
 
 //Some other strontio numbers are 1111, 2222, 3333, 4444, 5555, 6666, 7777, 8888, 9999, 1001, 2002, 3003, etc.	
 	
-	
-	
+		
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the number: ");
@@ -21,12 +20,19 @@ public class Strontio_Number {
 		// first digit
 		// at last, the resultant is divided by 10 that removes the last digit
 		// therefore, we get a two-digit number that are mean digits of the given number
+//		num = num * 2;
+//		System.out.println("num = num * 2 "+num);
+//		num = (num %1000) / 10;
+//		System.out.println("Number::");
 		num = (num * 2 % 1000) / 10;
-		System.out.println("Number"+num);
+//		//num * 2 = 2772 
+//		2772 % 10 = 772
+//		772 / 10 = 77		
+		System.out.println("Number "+num);
 		// divide the two-digit number (that we get from the above) by 10 and find the
 		// remainder
 		// compares the remainder and quotient
-		System.out.println("num % 10:: "+num % 10);
+		System.out.println("num % 10:: "+num % 1000);
 		System.out.println("num / 10::  "+num / 10);
 		if (num % 10 == num / 10)
 			

@@ -35,8 +35,15 @@ public class AddStrings {
 	public String addStrings(String num1, String num2) {
         BigInteger n1=new BigInteger(num1);
         BigInteger n2=new BigInteger(num2);
-        return (n1.add(n2)).toString();
+       // return (n1.add(n2)).toString();
+        return n1.add(n2).toString();
     }
-	
-	
+
+	//con wont work for large number can also use Long.ParseLong
+	public String addStrings2(String num1, String num2) {
+
+	int sum = Integer.parseInt(num1) + Integer.parseInt(num2);
+
+	return String.valueOf(sum);	
+	}
 }

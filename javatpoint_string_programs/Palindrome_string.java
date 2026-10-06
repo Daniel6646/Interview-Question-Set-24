@@ -23,5 +23,21 @@ public class Palindrome_string {
 	        else    
 	            System.out.println("Given string is not a palindrome");    
 	    }  
-	
+
+	 
+	 
+	public static void palindromeString2(){
+		
+        String str = "Kayak";
+
+        str = str.toLowerCase();
+
+        String reverse = new StringBuilder(str).reverse().toString();
+
+        if (str.equals(reverse)) {
+            System.out.println("Given string is palindrome");
+        } else {
+            System.out.println("Given string is not a palindrome");
+        }
+	}
 }

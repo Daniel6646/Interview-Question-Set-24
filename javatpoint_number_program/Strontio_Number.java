@@ -14,7 +14,15 @@ public class Strontio_Number {
 		System.out.print("Enter the number: ");
 		// reading an integer from the user
 		int num = sc.nextInt();
+		//strontioNumber1(num);
+		strontioNumber2(num);
+
+		}
+
+	public static void strontioNumber1(int num) { 
+		
 		int n = num;
+
 		// first, we have multiplied a number by 2
 		// the resultant is divided by 1000 that gives the remainder and removes the
 		// first digit
@@ -41,6 +49,42 @@ public class Strontio_Number {
 		else
 			// prints if not a strontio number
 			System.out.println(n + " is not a strontio number.");
+
+		
+		
+		
 	}
 
+	
+	public static void strontioNumber2(int num) {
+		
+		  int n = num;
+
+	        // Multiply by 2
+	        num = num * 2;
+
+	        // Get tens and hundreds digits
+	        int tens = (num / 10) % 10;
+	        System.out.println("tens:: "+tens);
+	        int hundreds = (num / 100) % 10;
+	        System.out.println("hundreds:: "+hundreds);
+
+
+	        if (tens == hundreds) {
+	        	
+	            System.out.println(n + " is a strontio number.");
+
+	        }
+	        else {
+	        	System.out.println(n + " is not a strontio number.");
+	        }
+	        
+	        // console logs
+//	        Enter the number: 1386
+//	        tens:: 7
+//	        hundreds:: 7
+//	        1386 is a strontio number.
+	    
+	}
+	
 }

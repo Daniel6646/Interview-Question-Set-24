@@ -67,10 +67,12 @@ public class Strontio_Number {
 
 	        // Get tens and hundreds digits
 	        int tens = (num / 10) % 10;
+//num/10 will reove last element so now no is 277 then %10 will get last element 7
 	        System.out.println("tens:: "+tens);
 //	        tens:: 7
 	        int hundreds = (num / 100) % 10;
 	        System.out.println("hundreds:: "+hundreds);
+//now num is 277, num/100 will remove 2 and	        
 //	        hundreds:: 7
 
 
@@ -87,6 +89,56 @@ public class Strontio_Number {
 	        // console logs
 //	        1386 is a strontio number.
 	    
+	        /* Remember this pattern:
+int tens = (num / 10) % 10;
+int hundreds = (num / 100) % 10;
+
+The rule is:
+Divide by the place value, then % 10 to get that digit.
+
+For example, 1386 × 2 = 2772
+Tens digit:
+2772 / 10 = 277
+277 % 10 = 7
+
+So:
+tens = 7
+
+Hundreds digit:
+2772 / 100 = 27
+27 % 10 = 7
+
+So:
+hundreds = 7
+
+Since:
+7 == 7
+
+→ 1386 is a Strontio number.
+Even more memorable version
+You can write it like this:
+num = num * 2;
+
+int tens = num / 10 % 10;
+int hundreds = num / 100 % 10;
+
+if (tens == hundreds)
+    System.out.println("Strontio Number");
+else
+    System.out.println("Not Strontio Number");
+
+I would recommend this version for you because you're practicing lots of Java number programs. The general pattern becomes reusable:
+num / 10 % 10      // tens digit
+num / 100 % 10     // hundreds digit
+num / 1000 % 10    // thousands digit
+
+So you don't have to memorize complicated expressions like:
+(num * 2 % 1000) / 10
+
+Your original code is clever, but the digit-by-digit version is much easier to explain in an interview and remember later.*/
+	        
+	        
+	        
 	}
 	
 }

@@ -33,35 +33,35 @@ public class FrequencyOfCharacters {
 			  if(strArray[i] != ' ' && strArray[i] != '0' && frequency[i] != 0) {
 			  System.out.println(strArray[i] + " | " + frequency[i]);
 			  }
-		  }
-		  
-		
+		  }	
 	}
-	
-	
-	public static void frequencyOfCharacters2() {
-		      
-		int[] arr = {1, 2, 8, 3, 2, 2, 2, 5, 1};
-
-		        HashMap<Integer, Integer> map = new HashMap<>();
-
-		        for (int num : arr) {
-
-		            if (map.containsKey(num)) {
-		            	
-		                map.put(num, map.get(num) + 1);
-		                
-		            } 
-		            else
-		            {
-		                map.put(num, 1);
-		            }
-		            
-		        }
-
-		        for (int num : map.keySet()) {
-		            System.out.println(num + " = " + map.get(num));
-		        }
-		    }
 		
+	public static void freqOfCharacs() {
+		
+		        String str = "picture perfect";
+
+		        HashMap<Character, Integer> map = new HashMap<>();
+
+		        for (char ch : str.toCharArray()) {
+
+		            if (ch != ' ') {
+
+		                if (map.containsKey(ch)) {
+		                	
+		                    map.put(ch, map.get(ch) + 1);
+		                    
+		                } 
+		                
+		                else {
+		                	
+		                    map.put(ch, 1);
+		                }
+		            }
+		        }
+
+		        for (char ch : map.keySet()) {
+		            System.out.println(ch + " = " + map.get(ch));
+		        }
+		    }	
+	
 }

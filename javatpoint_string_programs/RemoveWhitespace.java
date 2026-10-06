@@ -11,4 +11,15 @@ public class RemoveWhitespace {
             
         System.out.println("String after removing all the white spaces : " + str1);    
     }  
+
+    public static void removeWhitSpace() {
+	
+    String str = "Remove white spaces";
+
+    str = str.replace(" ", "");
+
+    System.out.println(str);
+
+}
+    
 }

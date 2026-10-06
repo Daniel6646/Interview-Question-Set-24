@@ -1,5 +1,8 @@
 package javatpoint_string_programs;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Subsets_of_String {
 
 	
@@ -15,11 +18,15 @@ public class Subsets_of_String {
 		String tempString= "";
 		int len = str.length();
 		String tempArray[] = new String[len*(len+1)/2] ;
+		//List<String> result = new ArrayList<>();
 		int temp = 0;
 		
 		for(int i = 0; i< str.length(); i++) {
 			
 			for (int j=i; j<str.length(); j++) {
+
+				//easier one line way
+				//result.add(str.substring(i, j+1));
 				
 				tempString = str.substring(i, j+1);
 				tempArray[temp] = tempString;

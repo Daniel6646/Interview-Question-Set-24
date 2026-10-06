@@ -58,16 +58,21 @@ public class Strontio_Number {
 	
 	public static void strontioNumber2(int num) {
 		
+//        Enter the number: 1386
 		  int n = num;
 
 	        // Multiply by 2
 	        num = num * 2;
+	        //num = 2772
 
 	        // Get tens and hundreds digits
 	        int tens = (num / 10) % 10;
 	        System.out.println("tens:: "+tens);
+//	        tens:: 7
 	        int hundreds = (num / 100) % 10;
 	        System.out.println("hundreds:: "+hundreds);
+//	        hundreds:: 7
+
 
 
 	        if (tens == hundreds) {
@@ -80,9 +85,6 @@ public class Strontio_Number {
 	        }
 	        
 	        // console logs
-//	        Enter the number: 1386
-//	        tens:: 7
-//	        hundreds:: 7
 //	        1386 is a strontio number.
 	    
 	}

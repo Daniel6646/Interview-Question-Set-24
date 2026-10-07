@@ -60,31 +60,28 @@ public class PowerOf4 {
 			return false;
 		}
 		
-		while (n % 4 == 0) {
+		while (n % 4 == 0) { // 4 % 4 = 0
 			
-			n = n / 4;
+			n = n / 4;  // 4 / 4 = 1
 		}
 		
-		return n ==1;
+		return n ==1;  // n == 1 for above case
 	}
-
-
-
-
-//common solution for prmbl power of 2, power of 3 and power of 4, can be used as a common solution for all of these 3 problems
+	
+	
+	//common solution for prmbl power of 2, power of 3 and power of 4, can be used as a common solution for all of these 3 problems
 	  
-	  public boolean isPower(int n, int base) {
+	  public boolean isPower(int n) {
 
-		    if (n <= 0) return false;
+		    if (n <= 0)
+		   return false;
 
-		    while (n % base == 0) {
-		        n = n / base;
+		    while (n % 4 == 0) {
+		        n = n / 4;
 		    }
 
 		    return n == 1;
 		}
-
-	
 
 	
 }

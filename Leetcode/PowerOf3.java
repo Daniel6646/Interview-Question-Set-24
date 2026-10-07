@@ -79,12 +79,12 @@ public class PowerOf3 {
 	
 	//common solution for prmbl power of 2, power of 3 and power of 4, can be used as a common solution for all of these 3 problems
 	  
-	  public boolean isPower(int n, int base) {
+	  public boolean isPower(int n) {
 
 		    if (n <= 0) return false;
 
-		    while (n % base == 0) {// 3 % 3 = 0
-		        n = n / base; //  3 / 3 = 1
+		    while (n % 3 == 0) {// 3 % 3 = 0
+		        n = n / 3; //  3 / 3 = 1
 		    }
 
 		    return n == 1;

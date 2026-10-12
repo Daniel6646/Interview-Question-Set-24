@@ -54,8 +54,8 @@ public class ReverseWordsInAString {
         String out = "";
 
         // Iterate through the words in reverse order
-        for (int i = str.length - 1; i > 0; i--) {
-        //        for (int i = str.length - 1; i >= 0; i--) {
+        for (int i = str.length - 1; i >= 0; i--) {
+   //   for (int i = str.length - 1; i >= 0; i--) {
 	
             // Append the current word and a space to the output
             out += str[i] + " ";
@@ -63,7 +63,7 @@ public class ReverseWordsInAString {
         System.out.println("Normal final str "+out );
         System.out.println("after adding last element " +out + str[0]);
         // Append the first word to the output (without trailing space)
-        return out + str[0];
+        return out;
     }
 
 	

@@ -139,12 +139,23 @@ public class BacksspaceStringCompar {
 	            }
 	        	
 	        }
+	        
+//	        For input "ab#c":
+//
+//	        	Initially: chars = [a, b, #, c], k = 0
+//	        	- Iteration 1: c = 'a' → store at chars[0] → k = 1
+//	        	- Iteration 2: c = 'b' → store at chars[1] → k = 2
+//	        	- Iteration 3: c = '#' → k-- → k = 1 (effectively removes b)
+//	        	- Iteration 4: c = 'c' → overwrite chars[1] with c → k = 2
+//	        	Final array: [a, c, #, c]
+	        
 	        //after processing char arr will have value
 	        //chars = [a, c, #, c]
-
+	        // as we are not deleting elements focus on k its just going back and forth
+	        
 	       return new String(chars, 0, k);
 	        
-	        //	        return string and check if both strings are equal
+ //return string and check if both strings are equal
 	        //return chars;
 	    }
 	
